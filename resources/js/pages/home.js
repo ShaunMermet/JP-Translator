@@ -87,8 +87,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var myTableDiv = document.getElementById("explanationTable")
         var table = document.createElement('TABLE')
         var tableBody = document.createElement('TBODY')
+        var tableHead = document.createElement('thead')
     
-        table.border = '1'
+        table.classList.add("table");
+        table.classList.add("table-striped");
+        table.appendChild(tableHead);
         table.appendChild(tableBody);
     
         var heading = new Array();
@@ -101,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
         //TABLE COLUMNS
         var tr = document.createElement('TR');
-        tableBody.appendChild(tr);
+        tableHead.appendChild(tr);
         for (var i = 0; i < heading.length; i++) {
             var th = document.createElement('TH')
             th.width = '75';

@@ -37,8 +37,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var myTableDiv = document.getElementById("vocabTable")
         var table = document.createElement('TABLE')
         var tableBody = document.createElement('TBODY')
+        var tableHead = document.createElement('thead')
     
-        table.border = '1'
+        table.classList.add("table");
+        table.classList.add("table-striped");
+        table.appendChild(tableHead);
         table.appendChild(tableBody);
     
         var heading = new Array();
